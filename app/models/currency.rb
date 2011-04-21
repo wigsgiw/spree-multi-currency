@@ -75,7 +75,6 @@ class Currency < ActiveRecord::Base
       convert(value,  @current.char_code, @basic.char_code)
     end
 
-
     # Основная валюта
     def basic
       @basic ||= first(:conditions => { :basic => true })
