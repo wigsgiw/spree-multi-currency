@@ -8,7 +8,11 @@ class CurrencyController < Spree::BaseController
     else
       flash[:error] = t(:currency_not_found)
     end
-
+    
+    p "====="
+    p params[:return_to]
+    p "====="
+    
     redirect_back_or_default(root_path)
   end
 end
